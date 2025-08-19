@@ -1,0 +1,119 @@
+.recipes_list {
+  width: 770px;
+  height: auto;
+  margin: 0 auto;
+  padding: 0;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
+  align-items: start;
+  overflow: hidden;
+}
+
+.recipe_card {
+  width: 100%;
+  max-width: 250px;
+  min-height: 320px;
+  text-align: center;
+  background-color: transparent;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  border-radius: 0.5rem;
+  z-index: 1;
+  transition: transform 0.2s ease-in-out;
+}
+
+.recipe_card:hover {
+  transform: scale(1.03);
+  cursor: pointer;
+}
+
+.content {
+  width: 100%;
+  flex: 1;
+  border: 1px solid #000000;
+  background-color: #6a8571;
+}
+
+.content:hover {
+  background-color: #5c7462;
+}
+
+.recipe_card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  position: relative;
+  top: 0;
+  margin-bottom: 5px;
+}
+
+.recipe_card p {
+  padding: 0 0 0 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #f5efef;
+  text-align: start;
+  overflow-wrap: break-word;
+}
+
+.recipe_card p:first-child {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #f5efef;
+  text-align: center;
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 1024px) {
+  .recipes_list {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+  .recipe_card {
+    width: 45%;
+    max-width: none;
+  }
+
+  .recipe_card img {
+    max-height: 8rem;
+  }
+
+  .recipe_card p {
+    font-size: 0.85rem;
+  }
+
+  .recipe_card p:first-child {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .recipes_list {
+    grid-template-columns: 1fr;
+  }
+
+  .recipe_card {
+    width: 90%;
+    max-width: none;
+    min-height: 280px;
+  }
+
+  .recipe_card img {
+    height: 120px;
+    max-height: 6rem;
+  }
+
+  .recipe_card p {
+    font-size: 0.75rem;
+    text-align: center;
+  }
+
+  .recipe_card p:first-child {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,86 @@
+.modal {
+  width: 80%;
+  max-width: 600px;
+  height: 200px;
+  background-color: #e4ddd4;
+  border-radius: 6px;
+  border: none;
+  box-shadow: 0 2px 8px #00000099;
+  padding: 1rem;
+  animation: fade-slide-up 0.3s ease-out forwards;
+}
+
+.modal p {
+  margin: 30px 0 0 0;
+  font-family: "Noto Sans", sans-serif;
+  text-align: center;
+  letter-spacing: 0.07rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.modal_save_button {
+  padding: 1rem 2rem;
+  font-family: "Noto Sans", sans-serif;
+  text-align: center;
+  letter-spacing: 0.07rem;
+  font-size: 1.2rem;
+  color: #38585c;
+  font-weight: 500;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  position: absolute;
+  bottom: 1.9rem;
+  right: 0.5rem;
+}
+
+.delete_modal {
+  position: relative;
+  height: 6rem;
+}
+.modal_button1 {
+  padding: 1rem 2rem;
+  font-family: "Noto Sans", sans-serif;
+  text-align: center;
+  font-size: 1.2rem;
+  letter-spacing: 0.07rem;
+  color: #38585c;
+  font-weight: 500;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.modal_button2 {
+  padding: 1rem 2rem;
+  font-family: "Noto Sans", sans-serif;
+  text-align: center;
+  font-size: 1.2rem;
+  letter-spacing: 0.07rem;
+  font-weight: 500;
+  color: #38585c;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.modal_save_button:hover,
+.modal_button1:hover,
+.modal_button2:hover {
+  letter-spacing: 0.08rem;
+  color: #ffffff;
+  background-color: #6a8571;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.modal::backdrop {
+  background-color: rgba(17, 17, 26, 0.6);
+}

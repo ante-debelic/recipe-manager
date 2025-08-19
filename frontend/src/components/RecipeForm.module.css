@@ -1,0 +1,251 @@
+.form_box {
+  width: 100%;
+  height: 100vh;
+  margin-top: 70px;
+}
+
+.form_box::before {
+  content: "";
+  background-color: #e4e4d7;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.form_ribbon {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  background-color: #beb8b866;
+  border: 1px solid #beb8b8;
+  box-shadow: #00000026 0px 3px 3px 0px;
+  z-index: 10;
+}
+
+.form_ribbon,
+p {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  text-align: center;
+  color: #38585c;
+}
+
+.ribbon_button {
+  padding: 20px;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  text-align: center;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.ribbon_button span {
+  margin: 15px;
+}
+
+.ribbon_button:hover {
+  transform: scale(1.2);
+  transition: 0.3s;
+}
+.new_recipe_form {
+  width: 100%;
+  height: auto;
+  margin: 60px 0 0 0;
+  padding: 20px 0 0 0;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.left_side,
+.right_side {
+  width: 50%;
+  height: 100%;
+  margin: 0 0 0 10px;
+  font-family: "Noto Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.right_side {
+  border-left: 3px solid #cccccc;
+}
+
+.left_side h2,
+.right_side h2 {
+  width: 100%;
+  font-family: "Mukta";
+  text-align: center;
+  font-size: 1.33rem;
+  font-weight: 500;
+}
+
+.right_side h3 {
+  width: 100%;
+  font-family: "Mukta";
+  text-align: start;
+  font-size: 1.15rem;
+  font-weight: 500;
+  margin: 5px 0 5px 0;
+}
+
+.right_side .photos img {
+  width: 125px;
+  height: 125px;
+  margin: 0 0 20px 5px;
+}
+
+.right_side .additional_info {
+  width: 100%;
+  padding: 0 0 30px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  border-bottom: 3px solid #cccccc;
+}
+
+.right_side .additional_info input[type="file"] {
+  margin: 8px 0 0 0;
+}
+
+.tags_container {
+  margin: 0 0 20px 0;
+  display: flex;
+  gap: 1.3rem;
+}
+
+.tag_container {
+  display: flex;
+  flex-direction: column;
+}
+
+.tag_container input[type="checkbox"] {
+  margin: 8px 0 0 0;
+}
+
+.right_side .additional_recipe_info {
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.additional_recipe_info input[type="number"] {
+  margin: 8px 0 0 0;
+}
+
+.add_ingredients_box {
+  width: 26%;
+  margin: 0 auto;
+  display: flex;
+  white-space: nowrap;
+}
+
+.add_ingredients_box button {
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+.servings,
+.cook_time {
+  width: 30%;
+  margin: 0 0 10px 0;
+  padding: 2px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+.cook_time span {
+  position: absolute;
+  bottom: 0;
+  right: -2.2rem;
+}
+
+@media (max-width: 1024px) {
+  .left_side h2,
+  .right_side h2 {
+    font-size: 1.1rem;
+  }
+
+  .right_side h3 {
+    font-size: 1rem;
+  }
+
+  .tags_container {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .new_recipe_form {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .left_side,
+  .right_side {
+    width: 90%;
+    border-left: none;
+    margin: 0;
+  }
+
+  .tags_container {
+    justify-content: space-between;
+  }
+
+  .left_side h2,
+  .right_side h2 {
+    font-size: 1rem;
+  }
+
+  .right_side h3 {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .form_ribbon p {
+    font-size: 0.9rem;
+  }
+
+  .tags_container {
+    gap: 0.7rem;
+  }
+
+  .left_side h2,
+  .right_side h2 {
+    font-size: 0.9rem;
+  }
+
+  .right_side h3 {
+    font-size: 0.8rem;
+  }
+
+  .servings,
+  .cook_time {
+    width: 45%;
+  }
+}

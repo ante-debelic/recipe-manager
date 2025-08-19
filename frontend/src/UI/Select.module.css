@@ -1,0 +1,43 @@
+.onlyInput_wrapper {
+  display: inline-block;
+  position: relative;
+}
+
+.selector_wrapper .error_icon {
+  height: 2rem;
+  margin: 0;
+  padding: 0.5rem 0;
+  font-size: 0.8rem;
+  color: #e40b0b;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+.units {
+  margin: 5px 5px 5px 0;
+  padding: 10px 0;
+  color: #6e6e6e;
+  border: 1px solid #252424;
+  border-radius: 5px;
+  box-shadow: #11111a1a 0px 0px 16px;
+}
+
+.invalid {
+  border: 1px solid #fb4444;
+}
+
+@media (max-width: 768px) {
+  .units {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .units {
+    font-size: 0.85rem;
+    padding: 6px;
+  }
+}
